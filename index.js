@@ -1,23 +1,33 @@
-import * as THREE from 'https://unpkg.com/three@0.141.0/build/three.module.js';
+import * as THREE from 'https://unpkg.com/three@0.128.0/build/three.module.js';
+import { GLTFLoader } from 'https://unpkg.com/three@0.128.0/examples/jsm/loaders/GLTFLoader.js';
 
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+let scene, camera, renderer, model;
 
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x0000ff });
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
+function init() {
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  renderer = new THREE.WebGLRenderer();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
 
-camera.position.z = 5;
+  const loader = new GLTFLoader();
+  loader.load('./models/SIKA_LOGO.gltf', function(gltf) {
+    model = gltf.scene;
+    scene.add(model);
+    animate();
+  });
 
-function animate() {
-    requestAnimationFrame(animate);
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-    renderer.render(scene, camera);
+  camera.position.z = 5;
 }
 
-animate();
+function animate() {
+  requestAnimationFrame(animate);
+
+  if (model) {
+    model.rotation.y += 0.01;
+  }
+
+  renderer.render(scene, camera);
+}
+
+init();
