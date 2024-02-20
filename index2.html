@@ -16,7 +16,9 @@
         document.body.appendChild(renderer.domElement);
 
         // Load the GLTF model
-        const loader = new THREE.GLTFLoader();
+        import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+        const loader = new GLTFLoader();
+        // const loader = new THREE.GLTFLoader();
         const modelPath = './models/SIKA_LOGO.gltf'; // Replace with your actual model path
         loader.load(modelPath, (gltf) => {
             const model = gltf.scene;
