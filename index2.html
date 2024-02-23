@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Model Viewer</title>
     <!-- Load Three.js and GLTFLoader via script tags -->
-    <script src="https://cdn.skypack.dev/three@0.161.0"></script>
-    <script src="https://cdn.skypack.dev/three@0.161.0/examples/jsm/loaders/GLTFLoader.js"></script>
+    <script type="module">
+    import * as THREE from 'https://cdn.skypack.dev/three';
+    import { GLTFLoader } from "https://cdn.skypack.dev/three@0.161.0/examples/jsm/loaders/GLTFLoader.js"></script>
 </head>
 <body>
     <script>
