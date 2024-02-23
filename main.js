@@ -11,7 +11,7 @@ function init() {
 
   const loader = new GLTFLoader();
   loader.load("./models/SIKA_LOGO.gltf", function(gltf) {
-    model = gltf.scene;
+    let model = gltf.scene;
     scene.add(model);
     animate();
   });
