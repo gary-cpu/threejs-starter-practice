@@ -10,7 +10,7 @@ function init() {
   document.body.appendChild(renderer.domElement);
 
   const loader = new GLTFLoader();
-  loader.load("https://github.com/gary-cpu/threejs-starter-practice/tree/gh-pages/models/SIKA_LOGO.gltf", function(gltf) {
+  loader.load("./models/SIKA_LOGO.gltf", function(gltf) {
     model = gltf.scene;
     scene.add(model);
     animate();
