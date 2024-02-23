@@ -19,13 +19,15 @@ function init() {
   });
 
   camera.position.z = 5;
+  camera.position.x = -10;
+  camera.position.y = -10;
 }
 
 function animate() {
   requestAnimationFrame(animate);
 
   if (model) {
-    model.rotation.y += 0.01;
+    model.rotation.x += 0.01;
   }
 
   renderer.render(scene, camera);
