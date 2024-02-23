@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Model Viewer</title>
+    <!-- Load Three.js and GLTFLoader via script tags -->
+    <script src="https://cdn.skypack.dev/three@0.133.0"></script>
+    <script src="https://cdn.skypack.dev/three@0.133.0/examples/jsm/loaders/GLTFLoader.js"></script>
 </head>
 <body>
     <script>
-        import * as THREE from 'https://cdn.skypack.dev/three@0.133.0/build/three.module.js';
-        import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.133.0/examples/jsm/loaders/GLTFLoader.js';
         // Set up scene, camera, and renderer
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -17,9 +18,7 @@
         document.body.appendChild(renderer.domElement);
 
         // Load the GLTF model
-        //import {GLTFLoader} from "https://cdn.jsdelivr.net/gh/mrdoob/three.js@master/examples/jsm/loaders/GLTFLoader.js";
-        const loader = new GLTFLoader();
-        // const loader = new THREE.GLTFLoader();
+        const loader = new THREE.GLTFLoader();
         const modelPath = './models/SIKA_LOGO.gltf'; // Replace with your actual model path
         loader.load(modelPath, (gltf) => {
             const model = gltf.scene;
