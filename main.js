@@ -12,7 +12,8 @@ function init() {
 
   const loader = new GLTFLoader();
   loader.load("./models/SIKA_LOGO.gltf", function(gltf) {
-    model = gltf.scene;
+    model = gltf.scene
+    scene.background = new THREE.Color('skyblue');
     scene.add(model);
     animate();
   });
