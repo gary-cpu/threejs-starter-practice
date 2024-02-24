@@ -31,7 +31,7 @@ function animate() {
 
 function animate() {
   requestAnimationFrame(animate);
-
+  let radius = 5;
 //  if (model) {
 //    model.rotation.y += 0.01;
 //  }
