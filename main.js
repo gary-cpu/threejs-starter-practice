@@ -11,7 +11,7 @@ function init() {
   document.body.appendChild(renderer.domElement);
 
   const loader = new GLTFLoader();
-  loader.load("./models/sika.gltf", function(gltf) {
+  loader.load("./models/sika.glb", function(gltf) {
     model = gltf.scene
     scene.background = new THREE.Color('skyblue');
     scene.add(model);
