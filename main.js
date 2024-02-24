@@ -11,16 +11,16 @@ function init() {
   document.body.appendChild(renderer.domElement);
 
   const loader = new GLTFLoader();
-  loader.load("./models/SIKA_LOGO.gltf", function(gltf) {
+  loader.load("./models/sika.gltf", function(gltf) {
     model = gltf.scene
     scene.background = new THREE.Color('skyblue');
     scene.add(model);
     animate();
   });
 
-  camera.position.z = 5;
-  camera.position.x = -10;
-  camera.position.y = -10;
+  camera.position.z = 0;
+  camera.position.x = 0;
+  camera.position.y = 0;
 }
 
 function animate() {
