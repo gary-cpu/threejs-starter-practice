@@ -18,10 +18,10 @@ function init() {
     scene.add(model);
     animate();
   });
+  camera.position.set(30,0,0);
+  camera.up = new THREE.Vector3(0,0,1);
+  camera.lookAt(new THREE.Vector3(0,0,0));
 
-  camera.position.z = 8;
-  camera.position.x = 0;
-  camera.position.y = 0;
 }
 function animate() {
   // Use Math.cos and Math.sin to set camera X and Z values based on angle
