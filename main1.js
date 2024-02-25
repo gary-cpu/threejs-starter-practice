@@ -18,7 +18,7 @@ function init() {
     scene.background = new THREE.Color('skyblue');
     scene.add(model);
     gltf.scene.rotation.z = Math.PI / 2;
-    model.rotate.set(2, 0, 0)
+    //model.rotate.set(2, 0, 0)
     animate();
   });
   camera.position.set(0, 0, 4);
