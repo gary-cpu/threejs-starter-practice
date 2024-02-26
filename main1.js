@@ -13,7 +13,7 @@ function init() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderer.domElement);
   const loader = new GLTFLoader();
-  loader.load("https://gary-cpu.github.io/threejs-starter-practice/models/sika.glb", function(gltf) {
+  loader.load("https://gary-cpu.github.io/threejs-starter-practice/models/model.glb", function(gltf) {
     model = gltf.scene
     scene.background = new THREE.Color('skyblue');
     scene.add(model);
