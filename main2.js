@@ -1,7 +1,7 @@
 // Import the necessary Three.js modules
 import * as THREE from 'three';
 import {
-  GLTFLoader
+  FBXLoader
 } from 'three/addons/loaders/FBXLoader.js';
 
 // Create a scene, camera, and renderer
