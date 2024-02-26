@@ -1,6 +1,8 @@
 // Import the necessary Three.js modules
 import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import {
+  GLTFLoader
+} from 'three/addons/loaders/GLTFLoader.js';
 
 // Create a scene, camera, and renderer
 const scene = new THREE.Scene();
