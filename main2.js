@@ -2,7 +2,7 @@
 import * as THREE from 'three';
 import {
   GLTFLoader
-} from 'three/addons/loaders/GLTFLoader.js';
+} from 'three/addons/loaders/FBXLoader.js';
 
 // Create a scene, camera, and renderer
 const scene = new THREE.Scene();
@@ -11,9 +11,9 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-// Load the glTF model
-const loader = new GLTFLoader();
-loader.load("https://gary-cpu.github.io/threejs-starter-practice/models/sika.glb", (gltf) => {
+// Load the FBX model
+const loader = new FBXLoader();
+loader.load("https://gary-cpu.github.io/threejs-starter-practice/models/sika_logo.fbx", (fbx) => {
     // Add the loaded model to the scene
     scene.add(gltf.scene);
 });
