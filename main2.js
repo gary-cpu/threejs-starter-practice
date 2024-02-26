@@ -20,6 +20,7 @@ loader.load("https://gary-cpu.github.io/threejs-starter-practice/models/sika.glb
 
 // Set the camera position
 camera.position.z = 5;
+scene.background = new THREE.Color('skyblue');
 
 // Create an animation loop
 const animate = () => {
