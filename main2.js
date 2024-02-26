@@ -15,7 +15,7 @@ document.body.appendChild(renderer.domElement);
 const loader = new FBXLoader();
 loader.load("https://gary-cpu.github.io/threejs-starter-practice/models/sika_logo.fbx", (model) => {
     // Add the loaded model to the scene
-    scene.add(model.scene);
+    scene.add(model);
 });
 
 // Set the camera position
